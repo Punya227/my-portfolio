@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punya Prakash Barik | Data Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #000; color: #fff; overflow-x: hidden; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        
+        /* Cosmic Particle Background */
+        .stars {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 50%, #0a0a1a 0%, #000 100%);
+            z-index: -2;
+        }
+        .particles {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+            opacity: 0.3;
+        }
+        .glow {
+            position: absolute;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(59,130,246,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        section { min-height: 100vh; padding: 120px 24px; position: relative; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+    <div class="stars"></div>
+    <div class="particles"></div>
+    <div class="glow" style="top: 10%; left: 10%;"></div>
+    <div class="glow" style="bottom: 10%; right: 10%;"></div>
+
+    <!-- Navigation -->
+    <header class="fixed top-8 left-0 w-full flex justify-center z-[100]">
+        <nav class="flex items-center gap-1 bg-black/60 backdrop-blur-xl border border-white/10 rounded-full px-2 py-1.5 text-[10px] font-medium tracking-widest uppercase text-slate-400 shadow-2xl">
+            <a href="#hero" class="flex items-center gap-1.5 px-3 py-1.5 text-white transition-all">
+                <span class="w-1.5 h-1.5 bg-orange-500 rounded-full"></span> Punya
+            </a>
+            <a href="#experience" class="px-4 py-1.5 hover:text-white transition-colors">Experience</a>
+            <a href="#work" class="px-4 py-1.5 hover:text-white transition-colors">Work</a>
+            <a href="#stack" class="px-4 py-1.5 hover:text-white transition-colors">Stack</a>
+            <a href="mailto:punyaprakash1@gmail.com" class="ml-2 bg-white text-black px-5 py-1.5 rounded-full font-bold hover:scale-105 transition-transform active:scale-95">
+                Hire Me
+            </a>
+        </nav>
+    </header>
+
+    <!-- 001: HERO SECTION -->
+    <section id="hero" class="flex flex-col items-center justify-center text-center">
+        <div class="reveal active">
+            <div class="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 rounded-full px-4 py-1 text-[10px] uppercase tracking-[0.3em] text-orange-400 font-bold mb-10">
+                <span class="w-1 h-1 bg-orange-500 rounded-full animate-pulse"></span>
+                Open to Opportunities
+            </div>
+            <p class="text-[11px] font-mono uppercase tracking-[0.4em] text-slate-500 mb-8">
+                Data Analyst • Senior Analytics Candidate • Hyderabad, IN
+            </p>
+            <h1 class="text-6xl md:text-8xl font-bold tracking-tighter leading-[0.9] mb-10">
+                I build data <br/>products for <br/>
+                <span class="bg-gradient-to-r from-blue-400 via-blue-500 to-indigo-500 bg-clip-text text-transparent">
+                    every industry.
+                </span>
+            </h1>
+            <p class="text-slate-400 text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-12 font-light">
+                4+ years experience turning complex datasets into executive strategy. Specialized in automating reporting workflows by 30% and driving 1.7x revenue growth through advanced SQL and financial analytics.
+            </p>
+            <div class="flex gap-4 justify-center">
+                <button class="bg-white text-black font-mono text-[11px] uppercase tracking-widest px-8 py-4 rounded-md font-bold hover:bg-slate-200 transition-all">Start Conversation</button>
+                <button class="border border-white/10 text-white font-mono text-[11px] uppercase tracking-widest px-8 py-4 rounded-md hover:bg-white/5 transition-all">See My Impact</button>
+            </div>
+        </div>
+
+        <!-- Metric Footer -->
+        <div class="absolute bottom-10 w-full max-w-5xl grid grid-cols-4 gap-4 px-6 border-t border-white/5 pt-10">
+            <div>
+                <div class="text-2xl font-bold">4<span class="text-blue-500">+</span></div>
+                <p class="text-[9px] uppercase tracking-widest text-slate-500 font-mono">Years Exp</p>
+            </div>
+            <div>
+                <div class="text-2xl font-bold text-blue-400">30%</div>
+                <p class="text-[9px] uppercase tracking-widest text-slate-500 font-mono">Manual Redux</p>
+            </div>
+            <div>
+                <div class="text-2xl font-bold text-indigo-400">1.7x</div>
+                <p class="text-[9px] uppercase tracking-widest text-slate-500 font-mono">Revenue Boost</p>
+            </div>
+            <div>
+                <div class="text-2xl font-bold text-blue-500">50%</div>
+                <p class="text-[9px] uppercase tracking-widest text-slate-500 font-mono">Waste Cut</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 002: EXPERIENCE -->
+    <section id="experience" class="max-w-6xl mx-auto">
+        <div class="flex flex-col items-center mb-24 reveal">
+            <div class="h-px w-32 bg-gradient-to-r from-transparent via-white/20 to-transparent mb-8"></div>
+            <p class="text-[10px] font-mono text-orange-500 tracking-[0.5em] mb-2">002</p>
+            <h2 class="text-[10px] font-mono text-slate-500 tracking-[0.5em] uppercase">Series / 3 Roles</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-12 reveal">
+            <div class="text-slate-500 font-mono text-[11px] space-y-2">
+                <p class="text-white">DEC 2023 — PRESENT</p>
+                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-orange-500 rounded-full"></span> CURRENT</p>
+            </div>
+            <div>
+                <h3 class="text-3xl font-semibold mb-2">Data Analyst <span class="text-slate-500 font-light">— Karma Primary Healthcare</span></h3>
+                <p class="text-slate-400 mb-8 max-w-2xl italic">Driving data strategy across 70+ clinics, translating clinical and inventory data into leadership-level insights.</p>
+                <ul class="space-y-4 text-slate-300 text-sm max-w-3xl">
+                    <li class="flex gap-4"><span class="text-slate-600">—</span> Architected automated Power BI KPI dashboards, reducing reporting time by 30%.</li>
+                    <li class="flex gap-4"><span class="text-slate-600">—</span> Optimized medicine pricing via 10% MRP discount strategy, increasing footfall by 10%.</li>
+                    <li class="flex gap-4"><span class="text-slate-600">—</span> Reduced expired medicine value by 50% (approx. Rs.15k/mo savings) via FEFO implementation.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 003: WORK (PROJECTS) -->
+    <section id="work" class="max-w-6xl mx-auto">
+        <div class="flex flex-col items-center mb-24 reveal">
+            <div class="h-px w-32 bg-gradient-to-r from-transparent via-white/20 to-transparent mb-8"></div>
+            <p class="text-[10px] font-mono text-orange-500 tracking-[0.5em] mb-2">003</p>
+            <h2 class="text-[10px] font-mono text-slate-500 tracking-[0.5em] uppercase">Reconstructions / 2 Projects</h2>
+        </div>
+
+        <div class="space-y-32">
+            <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 reveal">
+                <div>
+                    <h3 class="text-2xl font-bold mb-2">Cement Manufacturing Automation</h3>
+                    <p class="text-xs text-slate-500 font-mono mb-4 uppercase">Data Engineering • Visualization</p>
+                    <p class="text-slate-400 text-sm leading-relaxed">Exploratory Data Analysis (EDA) and preprocessing using Python to support process optimization in manufacturing.</p>
+                </div>
+                <div class="space-y-6">
+                    <p class="text-slate-300 text-sm flex gap-4"><span class="text-blue-500">→</span> Published multiple operational dashboards via Power BI Report Server for real-time monitoring.</p>
+                    <div class="flex gap-2">
+                        <span class="px-3 py-1 border border-white/10 rounded text-[9px] font-mono text-slate-400 uppercase">Python</span>
+                        <span class="px-3 py-1 border border-white/10 rounded text-[9px] font-mono text-slate-400 uppercase">MySQL</span>
+                        <span class="px-3 py-1 border border-white/10 rounded text-[9px] font-mono text-slate-400 uppercase">Power BI</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 reveal">
+                <div>
+                    <h3 class="text-2xl font-bold mb-2">Machine Downtime Analytics</h3>
+                    <p class="text-xs text-slate-500 font-mono mb-4 uppercase">Predictive Analysis • Web Scraping</p>
+                    <p class="text-slate-400 text-sm leading-relaxed">Identifying downtime patterns and recommending corrective actions for factory leadership.</p>
+                </div>
+                <div class="space-y-6">
+                    <p class="text-slate-300 text-sm flex gap-4"><span class="text-blue-500">→</span> Integrated web-scraping tools to collect secondary data for downtime correlation analysis.</p>
+                    <div class="flex gap-2">
+                        <span class="px-3 py-1 border border-white/10 rounded text-[9px] font-mono text-slate-400 uppercase">EDA</span>
+                        <span class="px-3 py-1 border border-white/10 rounded text-[9px] font-mono text-slate-400 uppercase">Looker Studio</span>
+                        <span class="px-3 py-1 border border-white/10 rounded text-[9px] font-mono text-slate-400 uppercase">Scraping</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 004: STACK -->
+    <section id="stack" class="max-w-6xl mx-auto">
+        <div class="flex flex-col items-center mb-24 reveal">
+            <div class="h-px w-32 bg-gradient-to-r from-transparent via-white/20 to-transparent mb-8"></div>
+            <p class="text-[10px] font-mono text-orange-500 tracking-[0.5em] mb-2">004</p>
+            <h2 class="text-[10px] font-mono text-slate-500 tracking-[0.5em] uppercase">Instruments</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 border border-white/10 reveal">
+            <div class="p-8 border-b md:border-b-0 md:border-r border-white/10">
+                <h4 class="text-orange-500 font-mono text-[10px] tracking-widest uppercase mb-8">Data Tools</h4>
+                <ul class="space-y-3 text-sm text-slate-300 font-light">
+                    <li>SQL (Advanced)</li>
+                    <li>Python (Pandas, NumPy)</li>
+                    <li>MySQL Workbench</li>
+                    <li>Excel (Advanced)</li>
+                </ul>
+            </div>
+            <div class="p-8 border-b md:border-b-0 md:border-r border-white/10">
+                <h4 class="text-orange-500 font-mono text-[10px] tracking-widest uppercase mb-8">Visualization</h4>
+                <ul class="space-y-3 text-sm text-slate-300 font-light">
+                    <li>Power BI (DAX)</li>
+                    <li>Tableau</li>
+                    <li>Google Looker Studio</li>
+                    <li>Power BI Report Server</li>
+                </ul>
+            </div>
+            <div class="p-8">
+                <h4 class="text-orange-500 font-mono text-[10px] tracking-widest uppercase mb-8">Analytics</h4>
+                <ul class="space-y-3 text-sm text-slate-300 font-light">
+                    <li>Predictive Analysis</li>
+                    <li>Customer Segmentation</li>
+                    <li>Trend & Pricing Analysis</li>
+                    <li>Inventory Analytics</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION & CERTIFICATIONS -->
+    <section class="max-w-6xl mx-auto min-h-fit pb-32">
+        <div class="reveal">
+            <h5 class="text-slate-500 font-mono text-[10px] tracking-widest uppercase mb-12 border-b border-white/5 pb-4">Education & Certifications</h5>
+            
+            <div class="space-y-8">
+                <div class="flex justify-between items-baseline group cursor-default">
+                    <h6 class="text-lg group-hover:text-blue-400 transition-colors">PGDM — Marketing (Minor: Finance)</h6>
+                    <span class="text-slate-500 font-mono text-[10px]">IMIS BHUBANESWAR • 2020</span>
+                </div>
+                <div class="flex justify-between items-baseline group cursor-default">
+                    <h6 class="text-lg group-hover:text-blue-400 transition-colors">Bachelor of Commerce (Accounting Hons)</h6>
+                    <span class="text-slate-500 font-mono text-[10px]">UTKAL UNIVERSITY • 2016</span>
+                </div>
+                <div class="flex justify-between items-baseline group cursor-default">
+                    <h6 class="text-lg group-hover:text-orange-400 transition-colors">Google AI Professional Certification</h6>
+                    <span class="text-slate-500 font-mono text-[10px]">GOOGLE • 2026</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Scroll Reveal Logic
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Smooth Mouse Glow effect
+        const glow = document.querySelector('.glow');
+        window.addEventListener('mousemove', (e) => {
+            glow.style.left = e.pageX - 300 + 'px';
+            glow.style.top = e.pageY - 300 + 'px';
+        });
+    </script>
+</body>
+</html>
